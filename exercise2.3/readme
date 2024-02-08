@@ -1,0 +1,37 @@
+Question:
+    Write a concurrent server application in which multiple clients can request
+files to server and server send requested file to client using stream socket.
+Design a suitable protocol for message exchange as above as suggested in the
+Assignment #2, so that client and server can communicate efficiently and
+server can ask different option to the client. (Hint: Use fork() system call).
+
+
+Ooutput:
+    Server:
+        jay@jay-VirtualBox:~/workspace/Work/SocketExercise/exercise2.3$ ./server 
+        A new child process created for concurrent socket operation for connected socket 4 
+        A new child process created for concurrent socket operation for connected socket 5 
+        A new child process created for concurrent socket operation for connected socket 6 
+
+    Client1:
+        jay@jay-VirtualBox:~/workspace/Work/SocketExercise/exercise2.3/client_bin$ ./client1
+        enter file name to copy from server: sample1.txt
+        response from server sample1
+
+        enter file name to copy from server:
+
+    Client2:
+        jay@jay-VirtualBox:~/workspace/Work/SocketExercise/exercise2.3/client_bin$ ./client2
+        enter file name to copy from server: sample2.txt
+        response from server sample2
+
+        enter file name to copy from server:
+
+    Client3:
+        jay@jay-VirtualBox:~/workspace/Work/SocketExercise/exercise2.3/client_bin$ ./client3
+        enter file name to copy from server: sample3.txt
+        response from server sample3
+
+        enter file name to copy from server:
+
+Finally the sample*.txt files can be seen in "jay@jay-VirtualBox:~/workspace/Work/SocketExercise/exercise2.3/client_bin" path
